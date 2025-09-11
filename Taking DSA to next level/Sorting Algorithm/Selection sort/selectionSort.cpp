@@ -6,7 +6,7 @@
 void selectionSort(int arr[], int n) {
   
   for (int i = 0; i < n - 1; i++) {
-    int minIndex = i;
+    int minIndex = i; 
 
     // Find the index of the minimum element
     for (int j = i + 1; j < n; j++) {

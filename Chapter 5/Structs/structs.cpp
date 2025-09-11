@@ -1,6 +1,6 @@
 #include <iostream>
 
-  // structs are u sed to group variables under one named structs 
+  // structs are sed of group of variables under one named structs 
   // and can obtain different datatypes.
 
   // variables in a structs are also called "member".

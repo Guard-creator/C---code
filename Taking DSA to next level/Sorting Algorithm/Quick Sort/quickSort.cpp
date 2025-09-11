@@ -12,9 +12,21 @@ int partition(int arr[], int low, int high) {
             swap(arr[i], arr[j]); // Move smaller elements to left
         }
     }
+    // we did we did swap with i + 1 with pivot
+    // bcoz in above loop i will increament when it find value less then
+    // pivot fo suppose i is 1 and loop end after a while
+    // so i is the only element in array that is less then pivot
+    // which means we have swap (in loop because the value is lower in the end)
+    // and down below i + 1 was the the index where we last sorted the element
+    // means if we put pivot after i that is i + 1 
+    // pivot will be the in th correction position everytime
     swap(arr[i + 1], arr[high]); // Place pivot in correct position
     return i + 1; // Return pivot index
 }
+
+// another thing to keep in mind
+// when you sort at left or right side
+// low and right become new value, based on pi
 
 // Quick Sort Recursive Function
 void quickSort(int arr[], int low, int high) {
