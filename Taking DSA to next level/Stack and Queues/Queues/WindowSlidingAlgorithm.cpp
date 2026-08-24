@@ -2,9 +2,30 @@
 #include <deque>
 #include <vector>
 
+// Note For You
+// Yes i OverExplain Things over here 
+// because i dont want forget what i learn soo yea
+
+// LeetCode 239 – Sliding Window Maximum
+
+// Problem:
+// Given an array `nums[]` and an integer `k`, find the maximum value
+// in each sliding window of size `k` as it moves from left to right.
+
+// Example:
+// nums = [1,3,-1,-3,5,3,6,7], k = 3
+// Output = [3,3,5,5,6,7]
+
+// 💡 Idea:
+// Use a deque (double-ended queue) to efficiently maintain
+// the maximum element in the current window in O(n) time.
+//   The deque stores **indices** (not values) and always keeps:
+// - Front → index of the largest element in the current window.
+// - Back → indices of smaller elements (removed when a bigger one comes).
+
 std::vector<int> slidingWindowMax(std::vector<int>& nums, int k) {
 
-  // dq only save index of nums
+  // deque only save index of nums
   // it may or might have higher index value or  smaller 
   // Deque stores indices in decreasing order of their values
   // Example: After processing i=2 for nums = [1,3,-1], the deque might be [1,2] 
